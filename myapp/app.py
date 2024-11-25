@@ -22,5 +22,11 @@ def process_request():
             result='invalid_input'
         )
 
+@app.route('/test', methods = ['GET'])
+def test_route():
+    return jsonify(
+        result='its running'
+    )
+
 if __name__ == '__main__':
     app.run(debug=True)
